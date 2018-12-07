@@ -16,7 +16,9 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {
   BsDropdownModule,
   TabsModule,
-  BsDatepickerModule
+  BsDatepickerModule,
+  ButtonsModule,
+  PaginationModule
 } from "ngx-bootstrap";
 import { HomeComponent } from "./home/home.component";
 import { RegisterComponent } from "./register/register.component";
@@ -60,6 +62,8 @@ export function tokenGetter() {
     ReactiveFormsModule,
     BsDropdownModule.forRoot(),
     BsDatepickerModule.forRoot(),
+    ButtonsModule.forRoot(),
+    PaginationModule.forRoot(),
     TabsModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     NgxGalleryModule,
