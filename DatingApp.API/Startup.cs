@@ -37,7 +37,7 @@ namespace DatingApp.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DataContext>(x => x.
-                UseMySql(Configuration.GetConnectionString("DefaultConnection"))
+               UseMySql(Configuration.GetConnectionString("DefaultConnection"))
                     .ConfigureWarnings(warnings => warnings.Ignore(CoreEventId.IncludeIgnoredWarning)));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
                 .AddJsonOptions(opt =>
@@ -123,7 +123,7 @@ namespace DatingApp.API
             }
 
             // app.UseHttpsRedirection();
-           // seeder.SeedUsers();
+            seeder.SeedUsers();
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             app.UseAuthentication();
             app.UseDefaultFiles();
